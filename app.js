@@ -14,9 +14,9 @@ app.use(cors());
 
 const PORT = process.env.PORT||8080;
 
-// app.use("/", (req, res) => {
-//     return res.send("Hello World")
-// })
+app.get("/", (req, res) => {
+    return res.send("Hello World")
+})
 
 //post request
 app.post('/api/v1/tasks/create', (req, res) => {
