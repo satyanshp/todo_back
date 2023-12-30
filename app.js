@@ -12,6 +12,10 @@ let sql;
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+    return res.send("Hello World")
+})
+
 //post request
 app.post('/api/v1/tasks/create', (req, res) => {
     try {
