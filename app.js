@@ -14,7 +14,7 @@ app.use(cors());
 
 const PORT = process.env.PORT||8080;
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
     return res.send("Hello World")
 })
 
