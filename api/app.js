@@ -12,6 +12,8 @@ let sql;
 app.use(bodyParser.json());
 app.use(cors());
 
+const PORT = 8080;
+
 app.get("/", (req, res) => {
     return res.send("Hello World")
 })
@@ -73,6 +75,6 @@ app.post('/api/v1/tasks/delete', function(req, res) {
     }); 
 });
 
-app.listen(8080, ()=>{
-    console.log("Listening on port 8080!");
+app.listen(PORT, ()=>{
+    console.log(`Listening on port ${PORT}`);
 })
